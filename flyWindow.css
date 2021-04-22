@@ -1,0 +1,39 @@
+body {
+  font-size: 8pt;
+  margin: 25px;
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  text-align: center;
+}
+.gradSpan {
+  float: right;
+  font-size: 8pt;
+  font-style: normal;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 9pt;
+  font-weight: 800;
+}
+p {
+  margin: 1px;
+}
+.schoolInfo {
+  font-size: 8pt;
+}
+.educationHeader {
+  margin-top: 25px;
+}
+ul {
+  padding-left: 20px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+.company {
+  font-style: italic;
+}
+.position {
+  margin-bottom: 7px;
+}
