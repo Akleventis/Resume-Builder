@@ -91,66 +91,68 @@
       <br />
 
       <!--  Professional Experience-->
-      <h3>Professional Experience</h3>
-      <p>Company:</p>
-      <input type="text" name="company" /><br />
-      <p>Location</p>
-      <input type="text" name="location" />
-      <p>Position:</p>
-      <input type="text" name="position" /><br />
-      <p>Date:</p>
-      <input type="date" name="startDate" /> to
-      <input type="date" name="endDate" />
+      <div class="box">
+        <div class="row">
+          <h3>Professional Experience</h3>
+          <p>Company:</p>
+          <input type="text" name="company" /><br />
+          <p>Location</p>
+          <input type="text" name="location" />
+          <p>Position:</p>
+          <input type="text" name="position" /><br />
+          <p>Date:</p>
+          <input type="date" name="startDate" /> to
+          <input type="date" name="endDate" />
+          <p>Bullets:</p>
+          <div>
+            <button type="button" id="bclick" class="bullet">+</button>
+          </div>
+          <textarea form="myForm" name="bullet0" cols="40" rows="2"></textarea>
+        </div>
+        <div class="row">
+          <h3>Professional Experience II</h3>
+          <p>Company:</p>
+          <input type="text" name="company" /><br />
+          <p>Location:</p>
+          <input type="text" name="location" />
+          <p>Position:</p>
+          <input type="text" name="position" /><br />
+          <p>Date:</p>
+          <input type="date" name="startDate" /> to
+          <input type="date" name="endDate" />
 
-      <div class="row">
-        <p>Bullets:</p>
-        <div>
-          <button type="button" id="bclick" class="bullet">+</button>
+          <div class="row">
+            <p>Bullets:</p>
+            <div>
+              <button type="button" class="bullet" onclick="addBullet('bullet1')">+</button>
+            </div>
+          </div>
+          <textarea form="myForm" name="bullet1" cols="40" rows="2"></textarea>
         </div>
       </div>
-      <textarea form="myForm" name="bullet0" cols="40" rows="2"></textarea>
-
-      <h3>Professional Experience II</h3>
-      <p>Company:</p>
-      <input type="text" name="company" /><br />
-      <p>Location:</p>
-      <input type="text" name="location" />
-      <p>Position:</p>
-      <input type="text" name="position" /><br />
-      <p>Date:</p>
-      <input type="date" name="startDate" /> to
-      <input type="date" name="endDate" />
-
-      <div class="row">
-        <p>Bullets:</p>
-        <div>
-          <button type="button" class="bullet" onclick="addBullet('bullet1')">+</button>
-        </div>
-      </div>
-      <textarea form="myForm" name="bullet1" cols="40" rows="2"></textarea>
-
-      <h3>Professional Experience III</h3>
-      <p>Company:</p>
-      <input type="text" name="company" /><br />
-      <p>Location:</p>
-      <input type="text" name="location" />
-      <p>Position:</p>
-      <input type="text" name="position" /><br />
-      <p>Date:</p>
-      <input type="date" name="startDate" /> to
-      <input type="date" name="endDate" />
-
-      <div class="row">
-        <p>Bullets:</p>
-        <div>
-          <button type="button" class="bullet" onclick="addBullet('bullet2')">+</button>
-        </div>
-      </div>
-      <textarea form="myForm" name="bullet2" cols="40" rows="2"></textarea>
-      <br />
-      <button type="submit" class="myButton">Submit</button>
-    </form>
   </div>
+
+  <!-- <h3>Professional Experience III</h3>
+  <p>Company:</p>
+  <input type="text" name="company" /><br />
+  <p>Location:</p>
+  <input type="text" name="location" />
+  <p>Position:</p>
+  <input type="text" name="position" /><br />
+  <p>Date:</p>
+  <input type="date" name="startDate" /> to
+  <input type="date" name="endDate" />
+
+  <div class="row">
+    <p>Bullets:</p>
+    <div>
+      <button type="button" class="bullet" onclick="addBullet('bullet2')">+</button>
+    </div>
+    <textarea form="myForm" name="bullet2" cols="40" rows="2"></textarea>
+    <br />
+    <button type="submit" class="myButton">Submit</button>
+    </form>
+  </div> -->
 </body>
 
 </html>
