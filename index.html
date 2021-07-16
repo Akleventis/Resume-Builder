@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Lets get you a job (:</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Lets get you a job (:</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
+</head>
+
+<body onload="clicks()">
+  <h3 id="main-heading"><b>Resume Builder</b></h3>
+  <div class="div1">
     <script src="projectJS.js"></script>
     <form id="myForm" onsubmit="hi()">
-      <header id="main-heading">
-        <h3><b>Build Your Resume</b></h3>
-      </header>
-      <section id="Header">
-
-        <div class="row">
-          <div class="entry">
-            <p>Full Name:</p>
-            <input type="text" id="name" />
+      <div class="box">
+        <div class="box-div">
+          <div class="row">
+            <div class="entry">
+              <p>Full Name:</p>
+              <input type="text" id="name" />
+            </div>
+            <div class="entry">
+              <p>City & State:</p>
+              <input type="text" id="state" />
+            </div>
+            <div class="entry">
+              <p>Phone Number:</p>
+              <input type="text" id="phone" />
+            </div>
           </div>
-          <div class="entry">
-            <p>City & State:</p>
-            <input type="text" id="state" />
-          </div>
-          <div class="entry">
-            <p>Phone Number:</p>
-            <input type="text" id="phone" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="entry">
-            <p>Email:</p>
-            <input type="email" id="email" />
-          </div>
-          <div class="entry">
-            <p>Website(s):</p>
-            <input type="text" name="site" />
-            <button type="button" class="bullet" onclick="createSite()">+</button>
+          <div class="row">
+            <div class="entry">
+              <p>Email:</p>
+              <input type="email" id="email" />
+            </div>
+            <div class="entry">
+              <p>Website(s):</p>
+              <input type="text" name="site" />
+              <button type="button" id="sclick" class="bullet">+</button>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
       <br />
-      <section class="row">
-        <div style="margin-right: 100px">
-          <!-- Education -->
-          <h3 name="education">Education</h3>
-          <p>School:</p>
-          <input type="text" name="school" />
-          <p>Degree:</p>
-          <input type="text" name="degree" />
-          <p>Graduation Date (Expected):</p>
-          <input type="date" name="gradDate" />
+      <div class="box">
+        <div class="box-div2">
+          <section class="row">
+            <div>
+              <!-- Education -->
+              <h3 name="education">Education</h3>
+              <p>School:</p>
+              <input type="text" name="school" />
+              <p>Degree:</p>
+              <input type="text" name="degree" />
+              <p>Graduation Date (Expected):</p>
+              <input type="date" name="gradDate" />
+            </div>
+          </section>
+          <div>
+            <!-- Education II-->
+            <section class="row">
+              <h3 name="education">Education II (if applicable)</h3>
+              <p>School:</p>
+              <input type="text" name="school" />
+              <p>Degree:</p>
+              <input type="text" name="degree" />
+              <p>Graduation Date (Expected):</p>
+              <input type="date" name="gradDate" />
+          </div>
+          </section>
         </div>
-        <div>
-          <!-- Education II-->
-          <h3 name="education">Education II (if applicable)</h3>
-          <p>School:</p>
-          <input type="text" name="school" />
-          <p>Degree:</p>
-          <input type="text" name="degree" />
-          <p>Graduation Date (Expected):</p>
-          <input type="date" name="gradDate" />
-        </div>
-      </section>
+      </div>
       <br />
 
       <!-- Technical Skills -->
-      <div class="row">
-        <h3>Technical Skills:</h3>
-        <div>
-          <button type="button" class="bullet" onclick="addSkill()">+</button>
+      <div class="box">
+        <div class="row">
+          <div class="box-div2">
+            <h3>Technical Skills:</h3>
+            <div>
+              <button id="tclick" type="button" class="bullet skill" onclick="addSkill()">+</button>
+            </div>
+            <div id="TechnicalSkills"><textarea form="myForm" name="skill" cols="30" rows="2"></textarea><br /></div>
+          </div>
         </div>
       </div>
-      <div id="TechnicalSkills"><textarea form="myForm" name="skill" cols="30" rows="2"></textarea><br /></div>
       <br />
 
       <!--  Professional Experience-->
@@ -93,7 +105,7 @@
       <div class="row">
         <p>Bullets:</p>
         <div>
-          <button type="button" class="bullet" onclick="addBullet('bullet0')">+</button>
+          <button type="button" id="bclick" class="bullet">+</button>
         </div>
       </div>
       <textarea form="myForm" name="bullet0" cols="40" rows="2"></textarea>
@@ -138,5 +150,7 @@
       <br />
       <button type="submit" class="myButton">Submit</button>
     </form>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -100,29 +100,55 @@ function createProfessionalExperience(flyWindow) {
   }
   flyWindow.write(jobStr);
 }
-function addBullet(n) {
-  var br = document.createElement("br");
-  var bullets = document.getElementsByName(n);
-  var textArea = document.createElement("textarea");
-  textArea.name = n;
-  textArea.cols = "40";
-  textArea.rows = "2";
-  bullets[bullets.length - 1].after(br, textArea);
+function addBullet(n, x) {
+  if (x<3) {
+    var br = document.createElement("br");
+    var bullets = document.getElementsByName(n);
+    var textArea = document.createElement("textarea");
+    textArea.name = n;
+    textArea.cols = "40";
+    textArea.rows = "2";
+    bullets[bullets.length - 1].after(br, textArea);
+    x+=1
+  }
 }
-function createSite() {
-  var sites = document.getElementsByName("site");
-  var text = document.createElement("input");
-  text.name = "site";
-  text.type = "text";
-  sites[sites.length - 1].after(text);
+function createSite(x) {
+  if (x<3) {
+    var sites = document.getElementsByName("site");
+    var text = document.createElement("input");
+    text.name = "site";
+    text.type = "text";
+    sites[sites.length - 1].after(text);
+  }
 }
 
-function addSkill() {
-  var br = document.createElement("br");
-  var skills = document.getElementsByName("skill");
-  var textArea = document.createElement("textarea");
-  textArea.name = "skill";
-  textArea.cols = "30";
-  textArea.rows = "2";
-  skills[skills.length - 1].after(br, textArea);
+function clicks(){
+  var sclick = 0
+  var bclick = 0
+  var tclick = 0
+  document.getElementById("sclick").addEventListener('click', function(){
+    sclick += 1;
+    createSite(sclick)
+  })
+  document.getElementById("bclick").addEventListener('click', function(){
+    bclick += 1;
+    addBullet('bullet0', bclick)
+  })
+  document.getElementById("tclick").addEventListener('click', function(){
+    tclick += 1;
+    addSkill(tclick)
+  })
+}
+
+function addSkill(x) {
+  if (x < 3) {
+    var br = document.createElement("br");
+    var skills = document.getElementsByName("skill");
+    var textArea = document.createElement("textarea");
+    textArea.name = "skill";
+    textArea.cols = "30";
+    textArea.rows = "2";
+    skills[skills.length - 1].after(br, textArea);
+    x++
+  }
 }
