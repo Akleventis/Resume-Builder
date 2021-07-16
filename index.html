@@ -79,7 +79,7 @@
       <!-- Technical Skills -->
       <div class="box">
         <div class="row">
-          <div class="box-div2">
+          <div class="box-div">
             <h3>Technical Skills:</h3>
             <div>
               <button id="tclick" type="button" class="bullet skill" onclick="addSkill()">+</button>
@@ -92,42 +92,44 @@
 
       <!--  Professional Experience-->
       <div class="box">
-        <div class="row">
-          <h3>Professional Experience</h3>
-          <p>Company:</p>
-          <input type="text" name="company" /><br />
-          <p>Location</p>
-          <input type="text" name="location" />
-          <p>Position:</p>
-          <input type="text" name="position" /><br />
-          <p>Date:</p>
-          <input type="date" name="startDate" /> to
-          <input type="date" name="endDate" />
-          <p>Bullets:</p>
-          <div>
-            <button type="button" id="bclick" class="bullet">+</button>
-          </div>
-          <textarea form="myForm" name="bullet0" cols="40" rows="2"></textarea>
-        </div>
-        <div class="row">
-          <h3>Professional Experience II</h3>
-          <p>Company:</p>
-          <input type="text" name="company" /><br />
-          <p>Location:</p>
-          <input type="text" name="location" />
-          <p>Position:</p>
-          <input type="text" name="position" /><br />
-          <p>Date:</p>
-          <input type="date" name="startDate" /> to
-          <input type="date" name="endDate" />
-
+        <div class="box-div">
           <div class="row">
+            <h3>Professional Experience</h3>
+            <button type="button" class="ex">+</button>
+            <p>Company:</p>
+            <input type="text" name="company" /><br />
+            <p>Location</p>
+            <input type="text" name="location" />
+            <p>Position:</p>
+            <input type="text" name="position" /><br />
+            <p>Date:</p>
+            <input type="date" name="startDate" /> to
+            <input type="date" name="endDate" />
             <p>Bullets:</p>
             <div>
-              <button type="button" class="bullet" onclick="addBullet('bullet1')">+</button>
+              <button type="button" id="bclick" class="bullet">+</button>
             </div>
+            <textarea form="myForm" name="bullet0" cols="30" rows="4"></textarea>
           </div>
-          <textarea form="myForm" name="bullet1" cols="40" rows="2"></textarea>
+          <div class="row">
+            <h3>Professional Experience II</h3>
+            <p>Company:</p>
+            <input type="text" name="company" /><br />
+            <p>Location:</p>
+            <input type="text" name="location" />
+            <p>Position:</p>
+            <input type="text" name="position" /><br />
+            <p>Date:</p>
+            <input type="date" name="startDate" /> to
+            <input type="date" name="endDate" />
+            <div class="row">
+              <p>Bullets:</p>
+              <div>
+                <button id="b1click" type="button" class="bullet">+</button>
+              </div>
+            </div>
+            <textarea form="myForm" name="bullet1" cols="30" rows="4"></textarea>
+          </div>
         </div>
       </div>
   </div>

@@ -13,6 +13,7 @@ body {
   width: 100%;
   position: fixed;
   margin: 0;
+  z-index: 1;
 }
 
 .div1 {
@@ -23,7 +24,7 @@ body {
 }
 .box {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .box-div {
@@ -36,6 +37,7 @@ body {
 }
 .box-div .row {
   max-width: 191px;
+  position: relative;
 }
 .box2 {
   display: flex;
@@ -59,4 +61,9 @@ p {
 }
 input {
   margin: 10px 10px 10px 0;
+}
+.ex {
+  position: absolute;
+  left: 75%;
+  top: 5%;
 }

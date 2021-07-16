@@ -100,45 +100,11 @@ function createProfessionalExperience(flyWindow) {
   }
   flyWindow.write(jobStr);
 }
-function addBullet(n, x) {
-  if (x<3) {
-    var br = document.createElement("br");
-    var bullets = document.getElementsByName(n);
-    var textArea = document.createElement("textarea");
-    textArea.name = n;
-    textArea.cols = "40";
-    textArea.rows = "2";
-    bullets[bullets.length - 1].after(br, textArea);
-    x+=1
-  }
-}
-function createSite(x) {
-  if (x<3) {
-    var sites = document.getElementsByName("site");
-    var text = document.createElement("input");
-    text.name = "site";
-    text.type = "text";
-    sites[sites.length - 1].after(text);
-  }
-}
 
-function clicks(){
-  var sclick = 0
-  var bclick = 0
-  var tclick = 0
-  document.getElementById("sclick").addEventListener('click', function(){
-    sclick += 1;
-    createSite(sclick)
-  })
-  document.getElementById("bclick").addEventListener('click', function(){
-    bclick += 1;
-    addBullet('bullet0', bclick)
-  })
-  document.getElementById("tclick").addEventListener('click', function(){
-    tclick += 1;
-    addSkill(tclick)
-  })
-}
+
+
+
+
 
 function addSkill(x) {
   if (x < 3) {
@@ -152,3 +118,63 @@ function addSkill(x) {
     x++
   }
 }
+
+function addBullet(n, x) {
+  if (x<3) {
+    var br = document.createElement("br");
+    var bullets = document.getElementsByName(n);
+    var textArea = document.createElement("textarea");
+    textArea.name = n;
+    textArea.cols = "30";
+    textArea.rows = "4";
+    bullets[bullets.length - 1].after(br, textArea);
+    x+=1
+  }
+}
+function addBullet1(n, x) {
+  if (x<3) {
+    var br = document.createElement("br");
+    var bullets = document.getElementsByName(n);
+    var textArea = document.createElement("textarea");
+    textArea.name = n;
+    textArea.cols = "30";
+    textArea.rows = "4";
+    bullets[bullets.length - 1].after(br, textArea);
+    x+=1
+  }
+}
+
+function createSite(x) {
+  if (x<3) {
+    var sites = document.getElementsByName("site");
+    var text = document.createElement("input");
+    text.name = "site";
+    text.type = "text";
+    sites[sites.length - 1].after(text);
+  }
+}
+
+function clicks(){
+  var sclick = 0
+  var bclick = 0
+  var b1click = 0
+  var tclick = 0
+  document.getElementById("sclick").addEventListener('click', function(){
+    sclick += 1;
+    createSite(sclick)
+  })
+  document.getElementById("bclick").addEventListener('click', function(){
+    bclick += 1;
+    addBullet('bullet0', bclick)
+  })
+  document.getElementById("tclick").addEventListener('click', function(){
+    tclick += 1;
+    addSkill(tclick)
+  })
+  document.getElementById("b1click").addEventListener('click', function(){
+    b1click += 1;
+    addBullet1('bullet1', b1click)
+  })
+}
+
+
