@@ -74,7 +74,7 @@ function createProfessionalExperience(flyWindow) {
   var endDates = document.getElementsByName("endDate");
   var bullets0 = document.getElementsByName("bullet0");
   var bullets1 = document.getElementsByName("bullet1");
-  var bullets2 = document.getElementsByName("bullet2");
+  var bullets2 = document.getElementsByName("bullet2"); //pro exp bullet names!
   var bulletArr = [bullets0, bullets1, bullets2];
   jobStr = "<h4>Professional Experience</h4>";
   for (let i = 0; i < companies.length; i++) {
@@ -120,7 +120,7 @@ function addSkill(x) {
 }
 
 function addBullet(n, x) {
-  if (x<3) {
+  if (x<4) {
     var br = document.createElement("br");
     var bullets = document.getElementsByName(n);
     var textArea = document.createElement("textarea");
@@ -132,7 +132,7 @@ function addBullet(n, x) {
   }
 }
 function addBullet1(n, x) {
-  if (x<3) {
+  if (x<4) {
     var br = document.createElement("br");
     var bullets = document.getElementsByName(n);
     var textArea = document.createElement("textarea");
@@ -142,6 +142,9 @@ function addBullet1(n, x) {
     bullets[bullets.length - 1].after(br, textArea);
     x+=1
   }
+}
+function insertAfter(newNode, existing){
+  existing.parentNode.insertBefore(newNode, existing.nextSibling);
 }
 
 function createSite(x) {
@@ -154,11 +157,47 @@ function createSite(x) {
   }
 }
 
+function addProfessionalExperience(x){
+  if (x<6) {
+    var rows = document.getElementsByName("proex");
+    var row = document.createElement("div");
+    row.className = "row";
+    row.name = "proex";
+    rows[rows.length-1].after(row);
+    // h3 inside row
+    var h3 = document.createElement("h3")
+    h3.innerHTML = "Hello"
+    row.appendChild(h3)
+    // p insert after
+    var p1 = document.createElement("p")
+    p1.innerHTML = "Company:"
+    insertAfter(p1, h3)
+
+
+
+
+
+
+    // var comp = document.getElementsByName("comp");
+    // var incomp = document.getElementsByName("incomp");
+    // var loc = document.getElementsByName("loc");
+    // var inloc = document.getElementsByName("inloc");
+    // var date = document.getElementsByName("date");
+    // var indate = document.getElementsByName("indate");
+    // var indate1 = document.getElementsByName("indate1");
+    // var bul = document.getElementsByName("bul");
+    // var d = document.getElementsByName("d");
+    // var butt = document.getElementsByName("butt");
+    // var tform = document.getElementsByName("tform");
+  }
+}
+
 function clicks(){
   var sclick = 0
   var bclick = 0
   var b1click = 0
   var tclick = 0
+  var pclick = 0
   document.getElementById("sclick").addEventListener('click', function(){
     sclick += 1;
     createSite(sclick)
@@ -171,9 +210,13 @@ function clicks(){
     tclick += 1;
     addSkill(tclick)
   })
-  document.getElementById("b1click").addEventListener('click', function(){
-    b1click += 1;
-    addBullet1('bullet1', b1click)
+  // document.getElementById("b1click").addEventListener('click', function(){
+  //   b1click += 1;
+  //   addBullet1('bullet1', b1click)
+  // })
+  document.getElementById("proclick").addEventListener('click', function(){
+    pclick +=1;
+    addProfessionalExperience(pclick)
   })
 }
 
