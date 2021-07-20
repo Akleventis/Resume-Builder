@@ -158,44 +158,87 @@ function createSite(x) {
 }
 
 function addProfessionalExperience(x){
-  if (x<6) {
+  if (x<5) {
     var rows = document.getElementsByName("proex");
     var row = document.createElement("div");
     row.className = "row";
-    row.name = "proex";
+    row.setAttribute("name", "proex");
     rows[rows.length-1].after(row);
     // h3 inside row
-    var h3 = document.createElement("h3")
-    h3.innerHTML = "Hello"
-    row.appendChild(h3)
-    // p insert after
-    var p1 = document.createElement("p")
-    p1.innerHTML = "Company:"
-    insertAfter(p1, h3)
-
-
-
-
-
-
-    // var comp = document.getElementsByName("comp");
-    // var incomp = document.getElementsByName("incomp");
-    // var loc = document.getElementsByName("loc");
-    // var inloc = document.getElementsByName("inloc");
-    // var date = document.getElementsByName("date");
-    // var indate = document.getElementsByName("indate");
-    // var indate1 = document.getElementsByName("indate1");
-    // var bul = document.getElementsByName("bul");
-    // var d = document.getElementsByName("d");
-    // var butt = document.getElementsByName("butt");
-    // var tform = document.getElementsByName("tform");
+    var h3 = document.createElement("h3");
+    var titles = ["II", "III", "IV", "V"]
+    h3.innerHTML = titles[x-1];
+    row.appendChild(h3);
+    // p company 
+    var cp = document.createElement("p");
+    cp.innerHTML = "Company:";
+    insertAfter(cp, h3);
+    // input company 
+    var cIn = document.createElement("input");
+    cIn.name = "company";
+    insertAfter(cIn, cp);
+    // p location 
+    var lp = document.createElement("p");
+    lp.innerHTML = "Location:";
+    insertAfter(lp, cIn);
+    // input location 
+    var lIn = document.createElement("input");
+    lIn.name = "location";
+    insertAfter(lIn, lp);
+    // p position
+    var pp = document.createElement("p")
+    pp.innerHTML = "Position:";
+    insertAfter(pp, lIn);
+    // input position
+    var pIn = document.createElement("input");
+    pIn.name = "position";
+    insertAfter(pIn, pp);
+    // p date
+    var dp = document.createElement("p")
+    dp.innerHTML = "Date(s) from - to:"
+    insertAfter(dp, pIn)
+    // input start date
+    var dInStart = document.createElement("input")
+    dInStart.setAttribute("type", "date")
+    dInStart.name = "startDate"
+    insertAfter(dInStart, dp)
+    // input end date
+    var dInEnd = document.createElement("input")
+    dInEnd.setAttribute("type", "date")
+    dInEnd.name = "endDate";
+    insertAfter(dInEnd, dInStart)
+    // bullet p
+    var bp = document.createElement("p")
+    bp.innerHTML = "Bullets:"
+    insertAfter(bp, dInEnd)
+    // button div
+    var bd = document.createElement("div")
+    insertAfter(bd, bp)
+    // add bullet button
+    var bb = document.createElement("button")
+    bb.innerHTML = "+"
+    bb.setAttribute("type", "button")
+    var bnames = ["b1click", "b2click", "b3click", "b4click"]
+    bb.setAttribute("id", bnames[x-1])
+    bd.appendChild(bb)
+    // text area
+    var t = document.createElement("textarea")
+    t.setAttribute("form", "myForm")
+    var textAreaNames = ["bullet1", "bullet2", "bullet3", "bullet4"]
+    t.name = textAreaNames[x-1]
+    t.setAttribute("cols", "30")
+    t.setAttribute("rows", "4")
+    insertAfter(t, bd)
+    // bullet event listener
+    document.getElementById(bnames[x-1]).addEventListener('click', function(){
+      addBullet1(textAreaNames[x-1], 1)
+    })
   }
 }
 
 function clicks(){
   var sclick = 0
   var bclick = 0
-  var b1click = 0
   var tclick = 0
   var pclick = 0
   document.getElementById("sclick").addEventListener('click', function(){
@@ -210,14 +253,9 @@ function clicks(){
     tclick += 1;
     addSkill(tclick)
   })
-  // document.getElementById("b1click").addEventListener('click', function(){
-  //   b1click += 1;
-  //   addBullet1('bullet1', b1click)
-  // })
   document.getElementById("proclick").addEventListener('click', function(){
     pclick +=1;
     addProfessionalExperience(pclick)
   })
 }
-
 
