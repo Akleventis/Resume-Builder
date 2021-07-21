@@ -213,11 +213,13 @@ function addProfessionalExperience(x){
     insertAfter(bp, dInEnd)
     // button div
     var bd = document.createElement("div")
+    bd.className = "bdiv";
     insertAfter(bd, bp)
     // add bullet button
     var bb = document.createElement("button")
     bb.innerHTML = "+"
     bb.setAttribute("type", "button")
+    bb.className="bbutton"
     var bnames = ["b1click", "b2click", "b3click", "b4click"]
     bb.setAttribute("id", bnames[x-1])
     bd.appendChild(bb)

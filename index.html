@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="styles.css" />
   <title>Lets get you a job (:</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body onload="clicks()">
@@ -21,15 +24,15 @@
           <div class="row">
             <div class="entry">
               <p>Full Name:</p>
-              <input type="text" id="name" />
+              <input id="name" />
             </div>
             <div class="entry">
               <p>City & State:</p>
-              <input type="text" id="state" />
+              <input  id="state" />
             </div>
             <div class="entry">
               <p>Phone Number:</p>
-              <input type="text" id="phone" />
+              <input  id="phone" />
             </div>
           </div>
           <div class="row">
@@ -39,13 +42,12 @@
             </div>
             <div class="entry">
               <p>Website(s):</p>
-              <input type="text" name="site" />
-              <button type="button" id="sclick" class="bullet">+</button>
+                <button type="button" id="sclick" class="bullet">+</button>
+              <input  name="site" />
             </div>
           </div>
         </div>
       </div>
-      <br />
       <div class="box">
         <div class="box-div">
           <section class="row">
@@ -53,10 +55,10 @@
               <!-- Education -->
               <h3 name="education">Education</h3>
               <p>School:</p>
-              <input type="text" name="school" />
+              <input  name="school" />
               <p>Degree:</p>
-              <input type="text" name="degree" />
-              <p>Graduation Date (Expected):</p>
+              <input  name="degree" />
+              <p>Graduation (expected):</p>
               <input type="date" name="gradDate" />
             </div>
           </section>
@@ -67,17 +69,16 @@
                 <!-- Education -->
                 <h3 name="education">Education</h3>
                 <p>School:</p>
-                <input type="text" name="school" />
+                <input  name="school" />
                 <p>Degree:</p>
-                <input type="text" name="degree" />
-                <p>Graduation Date (Expected):</p>
+                <input  name="degree" />
+                <p>Graduation (expected):</p>
                 <input type="date" name="gradDate" />
               </div>
             </section>
           </div>
         </div>
       </div>
-      <br />
 
       <!-- Technical Skills -->
       <div class="box">
@@ -91,64 +92,38 @@
           </div>
         </div>
       </div>
-      <br />
 
-      <!--  Professional Experience-->
       <div class="box">
         <div class="box-div">
           <div name="proex" class="row">
             <h3>Professional Experience</h3>
             <button id="proclick" type="button" class="ex">Add Section</button>
             <p>Company:</p>
-            <input type="text" name="company" />
+            <input  name="company" />
             <p>Location</p>
-            <input type="text" name="location" />
+            <input  name="location" />
             <p>Position:</p>
-            <input type="text" name="position" />
+            <input " name="position" />
             <p>Date(s) from - to:</p>
             <input type="date" name="startDate" />
             <input type="date" name="endDate" />
             <p>Bullets:</p>
-            <div>
-              <button type="button" id="bclick" class="bullet">+</button>
+            <div class="bdiv">
+              <button type="button" id="bclick" class="bullet bbutton">+</button>
             </div>
             <textarea form="myForm" name="bullet0" cols="30" rows="4"></textarea>
           </div>
-          
-
-
-          <!-- <div name="proex" class="row">
-            <h3>0</h3>
-
-
-          </div> -->
-          <!-- dynamically create this  -->
-
-          <!-- <div class="row">
-            <h3>Professional Experience</h3>  DONE
-            <p>Company:</p> DONE
-            <input type="text" name="company" /><br /> DONE
-            <p>Location</p> 
-            <input type="text" name="location" />
-            <p>Position:</p>
-            <input type="text" name="position" /><br />
-            <p>Date:</p>
-            <input type="date" name="startDate" /> to
-            <input type="date" name="endDate" />
-            <p>Bullets:</p>
-            
-            <div>
-              <button type="button" id="b1click" class="bullet">+</button>
-            </div>
-            <textarea form="myForm" name="bullet1" cols="30" rows="4"></textarea>
-          </div> -->
-
-          <!-- end of section  -->
-
         </div>
+        <button type="submit" class="myButton">Submit</button>
       </div>
+      <footer>
+        <p><a href="https://alexleventis.com" target="_blank">© Alex Leventis</a>
+          <span><a href="https://bit.ly/3wcMRaV" target="_blank">Github</a><a href="https://bit.ly/2Tnd6fW"
+              target="_blank">Linkdin</a></span>
+        </p>
+      </footer>
   </div>
-  <button type="submit" class="myButton">Submit</button>
+  
 
 </body>
 
