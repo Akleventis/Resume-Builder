@@ -91,7 +91,7 @@ function createProfessionalExperience(flyWindow) {
       locations[i].value +
       '<span class="gradSpan">' +
       startDates[i].value +
-      "  -  " +
+      "  ~  " +
       endDates[i].value +
       "</span></p>";
     jobStr += '<p class="position">' + positions[i].value + "</p>";
