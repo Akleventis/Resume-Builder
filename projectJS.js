@@ -131,18 +131,7 @@ function addBullet(n, x) {
     x+=1
   }
 }
-function addBullet1(n, x) {
-  if (x<4) {
-    var br = document.createElement("br");
-    var bullets = document.getElementsByName(n);
-    var textArea = document.createElement("textarea");
-    textArea.name = n;
-    textArea.cols = "30";
-    textArea.rows = "4";
-    bullets[bullets.length - 1].after(br, textArea);
-    x+=1
-  }
-}
+
 function insertAfter(newNode, existing){
   existing.parentNode.insertBefore(newNode, existing.nextSibling);
 }
@@ -232,10 +221,53 @@ function addProfessionalExperience(x){
     t.setAttribute("rows", "4")
     insertAfter(t, bd)
     // bullet event listener
-    document.getElementById(bnames[x-1]).addEventListener('click', function(){
-      addBullet1(textAreaNames[x-1], 1)
-    })
+    switch (x) {
+      case 1:
+        ex1(x, bnames, textAreaNames);
+        break;
+      case 2:
+        ex2(x, bnames, textAreaNames);
+        break;
+      case 3:
+        ex3(x, bnames, textAreaNames);
+        break;
+      case 4:
+        ex4(x, bnames, textAreaNames);
+        break;
+    }
   }
+}
+
+function ex1(x, bnames, textAreaNames){
+  var y = 0
+  document.getElementById(bnames[x-1]).addEventListener('click', function(){
+    y += 1;
+    addBullet(textAreaNames[x-1], y);
+  })
+}
+
+function ex2(x, bnames, textAreaNames){
+  var y = 0
+  document.getElementById(bnames[x-1]).addEventListener('click', function(){
+    y += 1;
+    addBullet(textAreaNames[x-1], y);
+  })
+}
+
+function ex3(x, bnames, textAreaNames){
+  var y = 0
+  document.getElementById(bnames[x-1]).addEventListener('click', function(){
+    y += 1;
+    addBullet(textAreaNames[x-1], y);
+  })
+}
+
+function ex4(x, bnames, textAreaNames){
+  var y = 0
+  document.getElementById(bnames[x-1]).addEventListener('click', function(){
+    y += 1;
+    addBullet(textAreaNames[x-1], y);
+  })
 }
 
 function clicks(){
