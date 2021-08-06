@@ -1,39 +1,50 @@
 body {
   font-size: 8pt;
   margin: 25px;
-  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-family: sans-serif;
+  /* font-weight: 700; */
 }
 .header {
   text-align: center;
+  
+}
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+h4 {
+  /* font-size: 1.1rem; */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 .gradSpan {
   float: right;
-  font-size: 8pt;
   font-style: normal;
 }
 h4 {
   margin-top: 10px;
   margin-bottom: 5px;
-  font-size: 9pt;
-  font-weight: 800;
+
 }
 p {
   margin: 1px;
 }
 .schoolInfo {
-  font-size: 8pt;
+  /* font-size: 8pt; */
 }
 .educationHeader {
   margin-top: 25px;
 }
 ul {
   padding-left: 20px;
-  margin-top: 2px;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 .company {
-  font-style: italic;
+  /* font-weight: bold; */
 }
 .position {
-  margin-bottom: 7px;
+  font-style: italic;
 }

@@ -1,9 +1,9 @@
 function hi() {
-  var flyWindow = window.open("", "", "width=600,height=800");
+  var flyWindow = window.open("", "", "width=670,height=800");
   flyWindow.document.write("<html><head>");
   var styleStr = '<link rel="stylesheet" href="flyWindow.css"></link>';
-  styleStr +=
-    '<link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"></link>';
+  // styleStr +=
+  //   '<link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"></link>';
   flyWindow.document.write(styleStr);
   flyWindow.document.write("</head>");
   flyWindow.document.write("<body>");
@@ -15,6 +15,10 @@ function hi() {
 
   flyWindow.document.write("</body>");
   flyWindow.document.write("</html>");
+  flyWindow.document.close();
+  flyWindow.onload = function() {
+    flyWindow.print();
+  }
 }
 
 function mainHeading(flyWindow) {
@@ -87,7 +91,7 @@ function createProfessionalExperience(flyWindow) {
       locations[i].value +
       '<span class="gradSpan">' +
       startDates[i].value +
-      "  -  " +
+      "  ~  " +
       endDates[i].value +
       "</span></p>";
     jobStr += '<p class="position">' + positions[i].value + "</p>";
@@ -147,7 +151,7 @@ function createSite(x) {
 }
 
 function addProfessionalExperience(x){
-  if (x<5) {
+  if (x<4) {
     var rows = document.getElementsByName("proex");
     var row = document.createElement("div");
     row.className = "row";
@@ -155,7 +159,7 @@ function addProfessionalExperience(x){
     rows[rows.length-1].after(row);
     // h3 inside row
     var h3 = document.createElement("h3");
-    var titles = ["II", "III", "IV", "V"]
+    var titles = ["II", "III", "IV"]
     h3.innerHTML = titles[x-1];
     row.appendChild(h3);
     // p company 
