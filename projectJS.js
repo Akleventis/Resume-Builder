@@ -2,8 +2,6 @@ function hi() {
   var flyWindow = window.open("", "", "width=670,height=800");
   flyWindow.document.write("<html><head>");
   var styleStr = '<link rel="stylesheet" href="flyWindow.css"></link>';
-  // styleStr +=
-  //   '<link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"></link>';
   flyWindow.document.write(styleStr);
   flyWindow.document.write("</head>");
   flyWindow.document.write("<body>");
@@ -42,16 +40,16 @@ function createEducation(flyWindow) {
   var gradDate = document.getElementsByName("gradDate");
   var edStr = '<h4 class="educationHeader">Education</h4>';
   edStr +=
-    '<p class="schoolInfo">' +
+    '<div class="ed"><p>' +
     schools[0].value +
-    ", " +
-    degrees[0].value +
-    '<span class="gradSpan">' +
-    "Graduation " +
+    '<span class="gradSpan">Graduation ' +
     gradDate[0].value +
-    "</span></p>";
+    '</span></p><i style="margin-bottom: 15px;">' + degrees[0].value + '</i></div>';
   if (schools[1].value.length != 0) {
-    edStr += "<p>" + schools[1].value + ", " + degrees[1].value + '<span class="gradSpan">' + "Graduation " + gradDate[1].value + "</span></p>";
+    edStr += "<p>" + schools[1].value + 
+    '<span class="gradSpan">Graduation ' +
+    gradDate[1].value + 
+    '</span></p><i>' + degrees[1].value + '</i>';
   }
   flyWindow.write(edStr);
 }
@@ -78,14 +76,14 @@ function createProfessionalExperience(flyWindow) {
   var endDates = document.getElementsByName("endDate");
   var bullets0 = document.getElementsByName("bullet0");
   var bullets1 = document.getElementsByName("bullet1");
-  var bullets2 = document.getElementsByName("bullet2"); //pro exp bullet names!
+  var bullets2 = document.getElementsByName("bullet2");
   var bulletArr = [bullets0, bullets1, bullets2];
   jobStr = "<h4>Professional Experience</h4>";
   for (let i = 0; i < companies.length; i++) {
     if (companies[i].value.length == 0) break;
     var currentBullet = bulletArr[i];
     jobStr +=
-      '<p class="company">' +
+      '<p>' +
       companies[i].value +
       " - " +
       locations[i].value +

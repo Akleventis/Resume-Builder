@@ -3,7 +3,6 @@ body {
   margin: 25px;
   font-size: 15px;
   font-family: sans-serif;
-  /* font-weight: 700; */
 }
 .header {
   text-align: center;
@@ -14,7 +13,6 @@ h1 {
   margin-bottom: 5px;
 }
 h4 {
-  /* font-size: 1.1rem; */
   margin-top: 15px;
   margin-bottom: 10px;
   font-weight: 600;
@@ -31,8 +29,8 @@ h4 {
 p {
   margin: 1px;
 }
-.schoolInfo {
-  /* font-size: 8pt; */
+.ed {
+  margin-bottom: 5px;
 }
 .educationHeader {
   margin-top: 25px;
@@ -42,9 +40,7 @@ ul {
   margin-top: 5px;
   margin-bottom: 20px;
 }
-.company {
-  /* font-weight: bold; */
-}
+
 .position {
   font-style: italic;
 }
